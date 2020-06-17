@@ -17,6 +17,7 @@
         <module>guava-cache</module>
         <module>class-loader</module>
         <module>state-machine</module>
+        <module>guava-bloom-filter</module>
     </modules>
 
     <dependencies>
