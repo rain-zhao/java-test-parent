@@ -19,6 +19,7 @@
         <module>state-machine</module>
         <module>guava-bloom-filter</module>
         <module>redis-bloom-filter</module>
+        <module>block-queue</module>
     </modules>
 
     <dependencies>
