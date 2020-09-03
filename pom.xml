@@ -12,7 +12,7 @@
         <module>service-loader</module>
         <module>service-loader-api</module>
         <module>service-loader-impl</module>
-        <module>bio</module>
+        <module>bio-nio</module>
         <module>executor</module>
         <module>guava-cache</module>
         <module>class-loader</module>
@@ -20,6 +20,7 @@
         <module>guava-bloom-filter</module>
         <module>redis-bloom-filter</module>
         <module>block-queue</module>
+        <module>jvm-test</module>
     </modules>
 
     <dependencies>

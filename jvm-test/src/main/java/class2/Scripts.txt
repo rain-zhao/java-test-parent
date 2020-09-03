@@ -1,0 +1,6 @@
+$ javac Foo.java
+$ java -cp ../ class1.Foo
+$ java -cp ../../resources/asmtools.jar org.openjdk.asmtools.jdis.Main  Foo.class > Foo.jasm.1
+
+$ java -cp ../../resources/asmtools.jar org.openjdk.asmtools.jasm.Main Foo.jasm
+$ java -cp ../ class2.Foo
