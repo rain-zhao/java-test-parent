@@ -1,0 +1,75 @@
+package  demo6;
+
+super public class Test2
+	version 52:0
+{
+  public Method "<init>":"()V"
+	stack 1 locals 1
+  {
+		aload_0;
+		invokespecial	Method java/lang/Object."<init>":"()V";
+		return;
+  }
+  public static Method target:"(I)V"
+	stack 0 locals 1
+  {
+		return;
+  }
+  public static Method main:"([Ljava/lang/String;)V"
+	throws java/lang/Exception
+	stack 6 locals 8
+  {
+		ldc	String "demo6.Test2";
+		invokestatic	Method java/lang/Class.forName:"(Ljava/lang/String;)Ljava/lang/Class;";
+		astore_1;
+		aload_1;
+		ldc	String "target";
+		iconst_1;
+		anewarray	class java/lang/Class;
+		dup;
+		iconst_0;
+		getstatic	Field java/lang/Integer.TYPE:"Ljava/lang/Class;";
+		aastore;
+		invokevirtual	Method java/lang/Class.getMethod:"(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;";
+		astore_2;
+		invokestatic	Method java/lang/System.currentTimeMillis:"()J";
+		lstore_3;
+		iconst_1;
+		istore	5;
+	L30:	stack_frame_type full;
+		locals_map class "[Ljava/lang/String;", class java/lang/Class, class java/lang/reflect/Method, long, int;
+		iload	5;
+		ldc	int 2000000000;
+		if_icmpgt	L88;
+		iload	5;
+		ldc	int 100000000;
+		irem;
+		ifne	L63;
+		invokestatic	Method java/lang/System.currentTimeMillis:"()J";
+		lstore	6;
+		getstatic	Field java/lang/System.out:"Ljava/io/PrintStream;";
+		lload	6;
+		lload_3;
+		lsub;
+		invokevirtual	Method java/io/PrintStream.println:"(J)V";
+		lload	6;
+		lstore_3;
+	L63:	stack_frame_type same;
+		aload_2;
+		aconst_null;
+		iconst_1;
+		anewarray	class java/lang/Object;
+		dup;
+		iconst_0;
+		sipush	128;
+		invokestatic	Method java/lang/Integer.valueOf:"(I)Ljava/lang/Integer;";
+		aastore;
+		invokevirtual	Method java/lang/reflect/Method.invoke:"(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;";
+		pop;
+		iinc	5, 1;
+		goto	L30;
+	L88:	stack_frame_type chop1;
+		return;
+  }
+
+} // end Class Test2

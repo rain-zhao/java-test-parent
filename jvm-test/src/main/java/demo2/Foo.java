@@ -1,4 +1,4 @@
-package class2;
+package demo2;
 
 public class Foo {
     static boolean boolValue;

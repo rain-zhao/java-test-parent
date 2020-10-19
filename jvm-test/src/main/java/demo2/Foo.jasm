@@ -1,8 +1,10 @@
-package  class1;
+package  demo2;
 
 super public class Foo
 	version 52:0
 {
+  static Field boolValue:Z;
+
   public Method "<init>":"()V"
 	stack 1 locals 1
   {
@@ -11,24 +13,23 @@ super public class Foo
 		return;
   }
   public static Method main:"([Ljava/lang/String;)V"
-	stack 2 locals 2
+	stack 2 locals 1
   {
-		iconst_1;
-		istore_1;
-		iload_1;
-		ifeq	L14;
+		iconst_3;
+		putstatic	Field boolValue:"Z";
+		getstatic	Field boolValue:"Z";
+		ifeq	L18;
 		getstatic	Field java/lang/System.out:"Ljava/io/PrintStream;";
 		ldc	String "Hello, Java!";
 		invokevirtual	Method java/io/PrintStream.println:"(Ljava/lang/String;)V";
-	L14:	stack_frame_type append;
-		locals_map int;
+	L18:	stack_frame_type same;
+		getstatic	Field boolValue:"Z";
 		iconst_1;
-		iload_1;
-		if_icmpne	L27;
+		if_icmpne	L33;
 		getstatic	Field java/lang/System.out:"Ljava/io/PrintStream;";
 		ldc	String "Hello, JVM!";
 		invokevirtual	Method java/io/PrintStream.println:"(Ljava/lang/String;)V";
-	L27:	stack_frame_type same;
+	L33:	stack_frame_type same;
 		return;
   }
 
